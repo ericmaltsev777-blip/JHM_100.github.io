@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- Оголошення типу документа HTML5 -->
+ 
+<html lang="uk">
+<!-- Кореневий елемент HTML, атрибут lang вказує мову документа -->
+ 
+<head>
+<!-- Службова частина сторінки (не відображається напряму) -->
+ 
+    <meta charset="UTF-8">
+<!-- Встановлює кодування UTF-8 для коректного відображення тексту -->
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Забезпечує адаптивність сторінки на мобільних пристроях -->
+ 
+    <title>Навчальна сторінка Bootstrap: UI-патерни</title>
+<!-- Заголовок сторінки у вкладці браузера -->
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Підключення CSS-фреймворку Bootstrap через CDN -->
+</head>
+ 
+<body>
+<!-- Видима частина HTML-документа -->
+ 
+<div class="container my-5">
+<!-- Основний контейнер Bootstrap з вертикальними відступами -->
+ 
+    <h1 class="text-center mb-5">
+        Bootstrap: патерни інтерфейсу
+</h1>
+<!-- Головний заголовок сторінки -->
+ 
+    <!-- ================================================= -->
+<!-- 8.1. ХЛІБНІ КРИХТИ (Breadcrumbs) -->
+<!-- ================================================= -->
+ 
+    <section class="mb-5">
+<!-- Семантичний блок окремої теми -->
+ 
+        <h2>8.1. Хлібні крихти</h2>
+<!-- Заголовок розділу -->
+ 
+        <p>
+            Хлібні крихти показують шлях користувача від головної сторінки
+            до поточної.
+</p>
+<!-- Пояснювальний текст для студентів -->
+ 
+        <nav aria-label="breadcrumb">
+<!-- Навігаційний контейнер для доступності -->
+ 
+            <ol class="breadcrumb">
+<!-- Впорядкований список з класом breadcrumb -->
+ 
+                <li class="breadcrumb-item">
+<!-- Елемент навігації -->
+<a href="#">Головна</a>
+<!-- Посилання -->
+</li>
+ 
+                <li class="breadcrumb-item">
+<a href="#">Каталог</a>
+</li>
+ 
+                <li class="breadcrumb-item active" aria-current="page">
+                    Товар
+</li>
+<!-- Поточна сторінка, активний елемент -->
+</ol>
+</nav>
+</section>
+ 
+    <!-- ================================================= -->
+<!-- 8.2. КАРТКИ (Cards) -->
+<!-- ================================================= -->
+ 
+    <section class="mb-5">
+<h2>8.2. Картки</h2>
+ 
+        <p>
+            Картки використовуються для відображення структурованої інформації:
+            товарів, новин, профілів.
+</p>
+ 
+        <div class="card" style="width: 18rem;">
+<!-- Основний контейнер картки -->
+ 
+            <img src="https://via.placeholder.com/300x200"
+                 class="card-img-top"
+                 alt="Приклад зображення">
+<!-- Зображення у верхній частині картки -->
+ 
+            <div class="card-body">
+<!-- Контентна частина картки -->
+ 
+                <h5 class="card-title">
+                    Назва картки
+</h5>
+<!-- Заголовок картки -->
+ 
+                <p class="card-text">
+                    Короткий опис вмісту картки.
+</p>
+<!-- Текстовий опис -->
+ 
+                <a href="#" class="btn btn-primary">
+                    Детальніше
+</a>
+<!-- Кнопка дії -->
+</div>
+</div>
+</section>
+ 
+    <!-- ================================================= -->
+<!-- 8.3. АКОРДЕОН (Accordion) -->
+<!-- ================================================= -->
+ 
+    <section class="mb-5">
+<h2>8.3. Акордеон</h2>
+ 
+        <p>
+            Акордеон дозволяє приховувати та показувати блоки інформації.
+</p>
+ 
+        <div class="accordion" id="accordionExample">
+<!-- Контейнер акордеона -->
+ 
+            <div class="accordion-item">
+<!-- Один елемент акордеона -->
+ 
+                <h2 class="accordion-header">
+<!-- Заголовок акордеона -->
+ 
+                    <button class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionItem1">
+                        Перший пункт
+</button>
+<!-- Кнопка відкриття контенту -->
+</h2>
+ 
+                <div id="accordionItem1"
+                     class="accordion-collapse collapse show">
+<!-- Контейнер розгортання -->
+ 
+                    <div class="accordion-body">
+                        Текст першого пункту акордеона.
+</div>
+<!-- Вміст акордеона -->
+</div>
+</div>
+</div>
+</section>
+ 
+    <!-- ================================================= -->
+<!-- 8.4. КАРУСЕЛЬ (Carousel) -->
+<!-- ================================================= -->
+ 
+    <section class="mb-5">
+<h2>8.4. Карусель</h2>
+ 
+        <p>
+            Карусель використовується для показу слайдів або зображень.
+</p>
+ 
+        <div id="carouselExample"
+             class="carousel slide"
+             data-bs-ride="carousel">
+<!-- Основний контейнер каруселі -->
+ 
+            <div class="carousel-inner">
+<!-- Контейнер для слайдів -->
+ 
+                <div class="carousel-item active">
+<!-- Перший активний слайд -->
+<img src="https://via.placeholder.com/800x300"
+                         class="d-block w-100"
+                         alt="Слайд 1">
+</div>
+ 
+                <div class="carousel-item">
+<!-- Другий слайд -->
+<img src="https://via.placeholder.com/800x300/777"
+                         class="d-block w-100"
+                         alt="Слайд 2">
+</div>
+</div>
+ 
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+<!-- Кнопка перемикання назад -->
+<span class="carousel-control-prev-icon"></span>
+</button>
+ 
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+<!-- Кнопка перемикання вперед -->
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</section>
+ 
+    <!-- ================================================= -->
+<!-- 8.5. МОДАЛЬНЕ ВІКНО (Modal) -->
+<!-- ================================================= -->
+ 
+    <section class="mb-5">
+<h2>8.5. Модальне вікно</h2>
+ 
+        <p>
+            Модальні вікна використовуються для діалогів і підтверджень.
+</p>
+ 
+        <button class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+            Відкрити модальне вікно
+</button>
+<!-- Кнопка відкриття модалки -->
+ 
+        <div class="modal fade" id="exampleModal">
+<!-- Контейнер модального вікна -->
+ 
+            <div class="modal-dialog">
+<!-- Контейнер діалогу -->
+ 
+                <div class="modal-content">
+<!-- Вміст модалки -->
+ 
+                    <div class="modal-header">
+<h5 class="modal-title">
+                            Заголовок модального вікна
+</h5>
+ 
+                        <button class="btn-close"
+                                data-bs-dismiss="modal">
+</button>
+<!-- Кнопка закриття -->
+</div>
+ 
+                    <div class="modal-body">
+                        Текст модального вікна.
+</div>
+ 
+                    <div class="modal-footer">
+<button class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                            Закрити
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+    <!-- ================================================= -->
+<!-- 8.6. ПАГІНАЦІЯ (Pagination) -->
+<!-- ================================================= -->
+ 
+    <section>
+<h2>8.6. Пагінація</h2>
+ 
+        <p>
+            Пагінація використовується для переходу між сторінками.
+</p>
+ 
+        <nav>
+<!-- Навігаційний контейнер -->
+ 
+            <ul class="pagination">
+<!-- Список сторінок -->
+ 
+                <li class="page-item disabled">
+<a class="page-link">Назад</a>
+</li>
+ 
+                <li class="page-item active">
+<a class="page-link">1</a>
+</li>
+ 
+                <li class="page-item">
+<a class="page-link">2</a>
+</li>
+ 
+                <li class="page-item">
+<a class="page-link">Вперед</a>
+</li>
+</ul>
+</nav>
+</section>
+ 
+</div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Підключення JavaScript Bootstrap для інтерактивних компонентів -->
+ 
+</body>
+</html>
